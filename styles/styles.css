@@ -1,13 +1,60 @@
 * {
 	margin: 0;
 	font-size: 62.5%;
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
 }
 
-ul {
+/* ul {
 	padding-left: 1.5%;
 }
 
 table, th, td {
 	border: 1px solid grey;
- }
+ } */
+
+ /* Стили для блоков */
+header {
+	margin: 10px 10px 0px 10px;
+	padding: 10px 10px 0px 10px;
+  }
+
+nav, h2 {
+	padding: 10px 0px 10px 0px;
+}
+
+main {
+	margin: 0px 10px 10px 10px;
+	padding: 0px 10px 0px 10px;
+}
+
+#contact {
+	background-color: black;
+	color: aliceblue;
+	padding: 10px 20px 10px 20px;
+}
  
+/* Стили для изображений */
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* Стили для таблиц */
+table, th, td {
+	padding: 5px;
+	border: 0.5px solid #151515;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+/* Стили для ссылок */
+a {
+	text-decoration: none;
+	color: #333;
+	padding-right: 5px;
+}
+
+a:hover {
+	color: #c00;
+}
