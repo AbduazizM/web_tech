@@ -1,30 +1,30 @@
 * {
 	margin: 0;
-	font-size: 1.07em;
+	font-size: 110%;
 	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 }
 
  /* Стили для блоков */
 header {
-	margin: 3% 3% 0% 3%;
-	padding: 3% 3% 0% 3%;
+	margin: 2.5rem 2.5rem 0rem 2.5rem;
+	padding: 2.5rem 2.5rem 0rem 2.5rem;
   }
 
 nav, h2 {
-	padding: 3% 0% 3% 0%;
+	padding: 2.5rem 0rem;
 	font-weight: bold;
 }
 
 main {
-	margin: 0% 3% 3% 3%;
-	padding: 0% 3% 0% 3%;
+	margin: 0rem 2.5rem 2.5rem 2.5rem;
+	padding: 0rem 2.5rem;
 }
 
 #contact {
 	background-color: black;
 	color: aliceblue;
-	padding: 3% 6% 3% 6%;
+	padding: 2.5rem 5rem;
 }
  
 /* Стили для изображений */
@@ -46,7 +46,7 @@ table, th, td {
 a {
 	text-decoration: none;
 	color: #333;
-	padding-right: 1.5%;
+	padding-right: 1.25rem;
 }
 
 a:hover {
