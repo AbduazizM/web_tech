@@ -21,7 +21,7 @@ main {
 	padding: 0rem 2.5rem;
 }
 
-#contact {
+footer {
 	background-color: black;
 	color: aliceblue;
 	padding: 2.5rem 5rem;
@@ -50,17 +50,11 @@ a {
 	padding-right: 1.25rem;
 }
 
-a:hover {
-	color: #c00;
+
+a:active{
+	color: tomato;
 }
 
 h1 {
 	font-size: 150%;
 }
-
-/* .block {
-	width: 1240px;
-	margin-left: auto;
-	margin-right: auto;
-} */
-
