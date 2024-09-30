@@ -9,9 +9,28 @@
 header {
 	margin: 2.5rem 2.5rem 0rem 2.5rem;
 	padding: 2.5rem 2.5rem 0rem 2.5rem;
-  }
+}
 
-nav, h2 {
+body {
+	display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+}
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2.5rem 0rem;
+	font-weight: bold;
+	margin: 0 -15px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+	margin: 0 15px;
+}
+
+h2 {
 	padding: 2.5rem 0rem;
 	font-weight: bold;
 }
@@ -25,8 +44,10 @@ footer {
 	background-color: black;
 	color: aliceblue;
 	padding: 2.5rem 5rem;
+	margin-top: auto;
+
 }
- 
+
 /* Стили для изображений */
 img {
 	width: auto;
@@ -43,18 +64,127 @@ table, th, td {
 	text-align: center;
 }
 
-/* Стили для ссылок */
-a {
-	text-decoration: none;
-	color: #333;
-	padding-right: 1.25rem;
+@media (hover :hover){
+	a:hover {
+		color: tomato;
+	}
 }
 
+@media (hover :none) {
+	a:active {
+		color: tomato;
+	}
+}
 
-a:active{
+a:first-child {
 	color: tomato;
 }
 
 h1 {
 	font-size: 150%;
+}
+
+/* Когда ширина экрана <= 800 */
+@media (max-width: 800px) {
+	* {
+		font-size: 100%;
+	}
+
+	header {
+		margin: 1.5rem 1.5rem 0rem 1.5rem;
+	}
+
+	main {
+		margin: 0rem 1.5rem 1.5rem 1.5rem;
+	}
+
+	footer {
+		padding: 1.5rem 4rem;
+	}
+
+	h2 {
+		padding: 2rem 0rem;
+	}
+
+	img {
+		width: 500px;
+	}
+
+	table, th, td {
+		font-size: 98%;
+		padding: 3px;
+	}
+}
+
+/* Когда ширина экрана <= 600 */
+@media (max-width: 600px) {
+	* {
+		font-size: 97%;
+	}
+
+	nav {
+		padding: 2rem 0rem;
+	}
+	
+	header {
+		padding: 2rem 2rem 0rem 2rem;
+	}
+
+	main {
+		padding: 0rem 2rem;
+	}
+
+	footer {
+		padding: 1.5rem 3.5rem;
+	}
+
+	h2 {
+		padding: 1.5rem 0rem;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav a {
+		font-size: calc(2.4px + 1em);
+	}
+}
+
+/* Когда ширина экрана <= 400 */
+@media (max-width: 400px) { 
+	* {
+		font-size: 94%;
+	}
+
+	nav {
+		padding: 1.5rem 0rem;
+	}
+	
+	header {
+		padding: 1.5rem 1.5rem 0rem 1.5rem;
+	}
+
+	main {
+		padding: 0rem 1.5rem;
+	}
+
+	footer {
+		padding: 1.5rem 3rem;
+	}
+
+	h2 {
+		padding: 1rem 0rem;
+	}
 }
