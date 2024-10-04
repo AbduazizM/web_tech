@@ -87,6 +87,7 @@ h1 {
 
 /* Кнопка добавить */
 .button-arounder {
+	color: black;
 	text-align: center;
     background-color: #f1eee9;
 	border-radius: 1.5rem;
@@ -138,6 +139,77 @@ a:nth-child(2) {
 	color: tomato;
 }
 
+.form-block {
+	display: grid;
+	grid-template-columns: 45% 45%;
+	width: 85%;
+	justify-content: space-between;
+	margin: auto;
+	font-size: 1rem;
+}
+
+/* .order-block, .client-info-block {
+    margin-bottom: 20px;
+} */
+form div p {
+	font-weight: bold;
+	margin-bottom: 1.5rem;
+}
+
+
+select, input, textarea {
+	height: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+	margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #949494;
+	border-radius: 3px;
+}
+
+.button {
+    /* padding: 10px 20px; */
+	height: 2.5rem;
+	background-color: #f1eee9;
+    color: black;
+    cursor: pointer;
+	border: 2px solid black;
+}
+
+.button_block {
+	display: grid;
+	grid-template-columns: 48% 48%;
+	justify-content: space-between;
+}
+
+button:hover {
+    background-color: #b9b8b8;
+}
+
+section:last-child h2 {
+	text-align: center;
+}
+
+.choose {
+	height: auto;
+	margin: 0.2rem;
+	width: auto;
+}
+
+.comment {
+	height: 8rem;
+}
+
+.p_deliver {
+	font-size: 0.9rem;
+	font-weight: normal;
+	margin-bottom: 1rem;
+}
+
+.second_input{
+	margin-bottom: 0;
+}
+
 /* Когда ширина экрана <= 800 */
 @media (max-width: 800px) {
 	* {
@@ -184,6 +256,11 @@ a:nth-child(2) {
 
 	.weight {
 		margin-bottom: 0.3rem;
+	}
+
+	.form-block {
+		width: 70%;
+		display: block;
 	}
 }
 
@@ -256,4 +333,11 @@ a:nth-child(2) {
 	.card:hover {
 		border: 1px solid tomato;
 	}
+
+	.form-block {
+		width: 90%;
+	}
 }
+
+
+
