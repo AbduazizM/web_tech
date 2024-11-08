@@ -58,8 +58,10 @@ h1 {
 
 /* Контейнер для карточек */
 .cards {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	/* justify-content: space-between; */
 	gap: 10px;
 	margin-bottom: 2.5rem;
 	width: 100%;
@@ -77,6 +79,7 @@ h1 {
 	background-color: white;
 	font-size: 1.2rem;
 	position: relative;
+	border: 2px solid transparent;
 }
 
 /* Надпись вес/объемы */
@@ -210,6 +213,10 @@ section:last-child h2 {
 	margin-bottom: 0;
 }
 
+
+.hidden{
+	display: none;
+}
 /* Когда ширина экрана <= 800 */
 @media (max-width: 800px) {
 	* {
