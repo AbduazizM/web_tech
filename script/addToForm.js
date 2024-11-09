@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideOrderDetails() {
         orderStatus.style.display = 'block';
         orderStatus.textContent = 'Ничего не выбрано';
-        // orderDetails.style.display = 'none';
         totalAmount = 0;
         updateOrderTotal();
     }
@@ -33,12 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function addDishToOrder(dish) {
         showOrderDetails();
 
-        // Subtract the price of the previously selected dish in this category, if any
         if (selectedDishes[dish.category]) {
             totalAmount -= selectedDishes[dish.category].price;
         }
 
-        // Add the new dish to the selected dishes and update the order form
         selectedDishes[dish.category] = dish;
 
         switch (dish.category) {
@@ -53,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
 
-        // Add the price of the new dish
+        
         totalAmount += dish.price;
         updateOrderTotal();
     }
@@ -70,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize with default message
     if (totalAmount === 0) {
         hideOrderDetails();
     }
@@ -80,20 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const specifiedTimeRadio = document.getElementById('specified_time');
     const fasterRadio = document.getElementById('faster');
 
-    // Отключаем поле времени доставки по умолчанию
+    // отключает поле времени доставки по умолчанию
     timeInput.disabled = true;
 
-    // Функция для включения/отключения поля времени
+    // функция для включения/отключения поля времени
     function toggleTimeInput() {
         if (specifiedTimeRadio.checked) {
-            timeInput.disabled = false; // Включаем поле времени
+            timeInput.disabled = false;
         } else {
-            timeInput.disabled = true;  // Отключаем поле времени
-            timeInput.value = '';       // Сбрасываем значение времени
+            timeInput.disabled = true;
+            timeInput.value = '';
         }
     }
 
-    // Отслеживаем изменения в выборе радио-кнопок
+    // отслеживает изменения в выборе радио-кнопок
     specifiedTimeRadio.addEventListener('change', toggleTimeInput);
     fasterRadio.addEventListener('change', toggleTimeInput);
 });
