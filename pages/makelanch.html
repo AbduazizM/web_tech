@@ -26,17 +26,51 @@
         
         <section>
             <h2>Выберите суп</h2>
+            <div class="filter-links">
+                <a href="#" data-filter="fish" data-category="soup">Рыбный</a>
+                <a href="#" data-filter="meat" data-category="soup">Мясной</a>
+                <a href="#" data-filter="veg" data-category="soup">Вегетарианский</a>
+            </div>
             <div id="soups" class="cards"></div>
         </section>
     
         <section>
             <h2>Выберите главное блюдо</h2>
+            <div class="filter-links">
+                <a href="#" data-filter="fish" data-category="main-course">Рыбное</a>
+                <a href="#" data-filter="meat" data-category="main-course">Мясное</a>
+                <a href="#" data-filter="veg" data-category="main-course">Вегетарианское</a>
+            </div>
             <div  id="main-courses" class="cards"></div>
         </section>
     
         <section>
+            <h2>Выберите салат или  стартер</h2>
+            <div class="filter-links">
+                <a href="#" data-filter="fish" data-category="salads_starter">Рыбный</a>
+                <a href="#" data-filter="meat" data-category="salads_starter">Мясной</a>
+                <a href="#" data-filter="veg" data-category="salads_starter">Вегетарианский</a>
+            </div>
+            <div id="salads_starters" class="cards"></div>
+        </section>
+
+        <section>
             <h2>Выберите напиток</h2>
+            <div class="filter-links">
+                <a href="#" data-filter="cold" data-category="beverage">Холодный</a>
+                <a href="#" data-filter="hot" data-category="beverage">Горячий</a>
+            </div>
             <div id="beverages" class="cards"></div>
+        </section>
+
+        <section>
+            <h2>Выберите десерт</h2>
+            <div class="filter-links">
+                <a href="#" data-filter="small" data-category="dessert">Маленькая порция</a>
+                <a href="#" data-filter="middle" data-category="dessert">Средняя порция</a>
+                <a href="#" data-filter="big" data-category="dessert">Большая порция</a>
+            </div>
+            <div id="desserts" class="cards"></div>
         </section>
 
         <section>
@@ -61,9 +95,19 @@
                                 <option value="">--Выберите главное блюдо--</option>
                             </select>
                         
+                            <label for="salads-select">Салаты или стартер</label>
+                            <select id="salads-select" name="salads_starters">
+                                <option value="">--Выберите салат или стартер</option>
+                            </select>
+
                             <label for="drink-select">Напиток</label>
                             <select id="drink-select" name="drink">
                                 <option value="">--Выберите напиток--</option>
+                            </select>
+
+                            <label for="dessert-select">Десерт</label>
+                            <select id="dessert-select" name="desserts">
+                                <option value="">--Выберите десерт</option>
                             </select>
                         
                             <p>Сумма заказа: <span id="order-total">0</span>₽</p>

@@ -151,9 +151,6 @@ a:nth-child(2) {
 	font-size: 1rem;
 }
 
-/* .order-block, .client-info-block {
-    margin-bottom: 20px;
-} */
 form div p {
 	font-weight: bold;
 	margin-bottom: 1.5rem;
@@ -171,7 +168,6 @@ select, input, textarea {
 }
 
 .button {
-    /* padding: 10px 20px; */
 	height: 2.5rem;
 	background-color: #f1eee9;
     color: black;
@@ -217,6 +213,48 @@ section:last-child h2 {
 .hidden{
 	display: none;
 }
+
+/* Общий стиль для блока фильтров */
+.filter-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Стили для ссылок-фильтров */
+.filter-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+	font-weight: bolder;
+    text-decoration: none;
+    color: #2f763e;
+	border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Ховер эффект для фильтров */
+.filter-links a:hover {
+    background-color: #eaeaea;
+    border-color: #999;
+}
+
+/* Активный фильтр */
+.filter-links a.active {
+    background-color: #d5f3dc; /* Цвет фона для активного состояния */
+    /* Цвет границы для активного состояния */
+}
+
+/* Анимация при нажатии */
+.filter-links a:active {
+    transform: scale(0.95);
+}
+
+
 /* Когда ширина экрана <= 800 */
 @media (max-width: 800px) {
 	* {
@@ -268,6 +306,10 @@ section:last-child h2 {
 	.form-block {
 		width: 70%;
 		display: block;
+	}
+	.filter-links a {
+		padding: 0.3rem 0.8rem;
+		font-size: 83%;
 	}
 }
 
@@ -343,6 +385,11 @@ section:last-child h2 {
 
 	.form-block {
 		width: 90%;
+	}
+
+	.filter-links a {
+		padding: 0.2rem 0.6rem;
+		font-size: 73%;
 	}
 }
 

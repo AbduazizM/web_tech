@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderTotal = document.getElementById('order-total');
     const soupSelect = document.getElementById('soup-select');
     const mainDishSelect = document.getElementById('main-dish-select');
+    const saladsStarterSelect = document.getElementById('salads-select');
     const drinkSelect = document.getElementById('drink-select');
+    const dessertSelect = document.getElementById('dessert-select');
 
     let totalAmount = 0;
-    const selectedDishes = { soup: null, "main-course": null, beverage: null };
+    const selectedDishes = { soup: null, "main-course": null, beverage: null, salads_starter: null, dessert: null };
 
     function updateOrderTotal() {
         orderTotal.textContent = totalAmount;
@@ -45,12 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'main-course':
                 mainDishSelect.innerHTML = `<option value="${dish.keyword}" selected>${dish.name} ${dish.price}₽</option>`;
                 break;
+            case 'salads_starter':
+                saladsStarterSelect.innerHTML = `<option value="${dish.keyword}" selected>${dish.name} ${dish.price}₽</option>`;
+                break;
             case 'beverage':
                 drinkSelect.innerHTML = `<option value="${dish.keyword}" selected>${dish.name} ${dish.price}₽</option>`;
                 break;
+            case 'dessert':
+                dessertSelect.innerHTML = `<option value="${dish.keyword}" selected>${dish.name} ${dish.price}₽</option>`;
+                break;
         }
 
-        
         totalAmount += dish.price;
         updateOrderTotal();
     }
@@ -76,20 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const specifiedTimeRadio = document.getElementById('specified_time');
     const fasterRadio = document.getElementById('faster');
 
-    // отключает поле времени доставки по умолчанию
     timeInput.disabled = true;
 
-    // функция для включения/отключения поля времени
     function toggleTimeInput() {
         if (specifiedTimeRadio.checked) {
-            timeInput.disabled = false;
+            timeInput.disabled = false; // Включаем поле времени
         } else {
-            timeInput.disabled = true;
-            timeInput.value = '';
+            timeInput.disabled = true;  // Отключаем поле времени
+            timeInput.value = '';       // Сбрасываем значение времени
         }
     }
 
-    // отслеживает изменения в выборе радио-кнопок
+    // Отслеживаем изменения в выборе радио-кнопок
     specifiedTimeRadio.addEventListener('change', toggleTimeInput);
     fasterRadio.addEventListener('change', toggleTimeInput);
 });
