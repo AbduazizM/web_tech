@@ -246,14 +246,12 @@ section:last-child h2 {
 /* Активный фильтр */
 .filter-links a.active {
     background-color: #d5f3dc; /* Цвет фона для активного состояния */
-    /* Цвет границы для активного состояния */
 }
 
 /* Анимация при нажатии */
 .filter-links a:active {
     transform: scale(0.95);
 }
-
 
 /* Когда ширина экрана <= 800 */
 @media (max-width: 800px) {
@@ -276,7 +274,7 @@ section:last-child h2 {
 		padding-top: 1.2rem;
 		padding-left: 1.6rem;
 		padding-right: 1.6rem;
-		width: 12.7rem;
+		width: 13rem;
 		height: 19.5rem;
 		border-radius: 2rem;
 		font-size: 83%;
@@ -352,7 +350,7 @@ section:last-child h2 {
         padding-top: 0.9rem;
         padding-left: 1.3rem;
         padding-right: 1.3rem;
-        width: 9.7rem;
+        width: 10rem;
         height: 14.5rem;
         border-radius: 1.5rem;
         font-size: 73%;
