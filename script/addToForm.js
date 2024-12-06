@@ -200,18 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 createNotification('Выберите напиток');
                 event.preventDefault();
                 break;
-            case (drink || dessertSelect) && !mainDish:
+            case (drink || dessertSelect) && !mainDish && !mainDish && !saladStarter:
                 createNotification('Выберите главное блюдо');
                 event.preventDefault();
                 break;
             default:
-                createNotification('Неполный заказ. Проверьте выбранные блюда');
-                event.preventDefault();
                 break;
         }
 
         // Если всё корректно, форма отправляется
-        return true;
+        return false;
     }
 
     // Добавляем проверку на отправку формы

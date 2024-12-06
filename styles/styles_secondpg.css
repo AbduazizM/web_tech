@@ -305,8 +305,6 @@ section:last-child h2 {
 	white-space: nowrap;
 }
 
-
-
 /* Когда ширина экрана <= 800 */
 @media (max-width: 800px) {
 	* {
